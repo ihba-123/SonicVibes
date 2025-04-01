@@ -27,7 +27,13 @@ const DashboardStats = () => {
 			bgColor: "bg-orange-500/10",
 			iconColor: "text-orange-500",
 		},
-	
+		{
+			icon: PlayCircle,
+			label: "Total Users",
+			value: stats.totalUsers.toLocaleString(),
+			bgColor: "bg-sky-500/10",
+			iconColor: "text-sky-500",
+		},
 	];
 
 	return (

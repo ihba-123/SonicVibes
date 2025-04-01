@@ -20,11 +20,7 @@ const AdminPage = () => {
 
   console.log("AdminPage - isSignedIn:", isSignedIn, "isEmailPasswordLoggedIn:", isEmailPasswordLoggedIn, "isAuthenticated:", isAuthenticated, "isAdmin:", isAdmin);
 
-  // Redirect to sign-in if not authenticated
-  if (!isAuthenticated) {
-    console.log("User not authenticated, redirecting to /signin");
-    return <Navigate to="/signin" replace />;
-  }
+ 
 
   // Redirect to home if not an admin
   if (!isAdmin ) {
