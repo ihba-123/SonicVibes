@@ -18,7 +18,7 @@ const Topbar = () => {
 		>
 			<div className='flex gap-2 items-center'>
       <img src="/Sonic.png" className="size-8" alt="SonicVibes logo" />
-        ̽SONIC || VIBES
+        ̽S_VIBES
       </div>
 			<div className='flex items-center gap-4'>
 				{isAdmin && (
