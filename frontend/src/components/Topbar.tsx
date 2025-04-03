@@ -12,18 +12,22 @@ const Topbar = () => {
 
 	return (
 		<div
-			className='flex items-center justify-between p-4 sticky top-0 bg-gray-800 
-      backdrop-blur-md z-10
-    '
+			className="flex items-center justify-between h-15 sticky top-0 bg-gray-800 
+      backdrop-blur-md z-10"
 		>
-			<div className='flex gap-2 items-center'>
-      <img src="/Sonic.png" className="size-8" alt="SonicVibes logo" />
-        ̽S_VIBES
-      </div>
-			<div className='flex items-center gap-4'>
+			{/* Logo and Name (Name hidden in mobile view) */}
+			<div className="flex items-center gap-2">
+				<img src="/Sonic.png" className="h-24" alt="SonicVibes logo" />
+			</div>
+
+			{/* Buttons: Always next to the logo */}
+			<div className="flex items-center gap-2 sm:gap-4">
 				{isAdmin && (
-					<Link to={"/admin"} className={cn(buttonVariants({ variant: "outline" }))}>
-						<LayoutDashboardIcon className='size-4  mr-2' />
+					<Link
+						to={"/admin"}
+						className={cn(buttonVariants({ variant: "outline" }), "text-sm sm:text-base")}
+					>
+						<LayoutDashboardIcon className="size-4 mr-2" />
 						Admin Dashboard
 					</Link>
 				)}
@@ -37,4 +41,5 @@ const Topbar = () => {
 		</div>
 	);
 };
+
 export default Topbar;
